@@ -1,0 +1,51 @@
+<div class="row justify-content-md-center profile-wrapper">
+  <div class="col-md-4 text-center">
+      <%= image_tag avatar_url(@user), width: '152', height: '152', class: "round-img" %>
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <% if @user.sex == "男" %>
+        <%= image_tag 'man.png' , width: '30', height: '30' %>
+      <% else %>
+        <%= image_tag 'woman.png' , width: '30', height: '30' %>
+      <% end %>
+      <p class="username"><%= @user.name %></p>
+      <% if @user == current_user %>
+        <%= link_to "完善资料", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
+        <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal"></button>
+      <% end %>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">设置</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="list-group text-center">
+              <%= link_to "修改密码", edit_user_registration_path, class: "list-group-item list-group-item-action" %>
+              <%= link_to "退出", destroy_user_session_path, method: :delete,
+                class: "list-group-item list-group-item-action" %>
+              <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">取消</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-email">
+      <p class="email"><%= image_tag 'email.png' , width: '30', height: '30' %>：<%= @user.email %></p>
+    </div>
+    <div class="row-academy">
+      <p class="academy"><%= image_tag 'academy.png' , width: '30', height: '30' %>：<%= @user.academy %></p>
+    </div>
+    <div class="row-phone">
+      <p class="phone"><%= image_tag 'phone.png' , width: '30', height: '30' %>：<%= @user.phone %></p>
+    </div>
+    <div class="row-wechatid">
+      <p class="wechatid"><%= image_tag 'wechat.png' , width: '30', height: '30' %>：<%= @user.wechatid %></p>
+    </div>
+  </div>
+  </div>
+</div>
