@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  root 'posts#index'
   
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   controllers: {registrations: 'registrations'}
   
   resources :users, only: [:show]
+  
+  resources :posts, only: [:index, :show, :create, :destroy] do
+    resources :photos, only: [:create]
+  end
 end

@@ -35,6 +35,12 @@ gem 'jquery-rails'
 gem 'toastr-rails'
 gem 'rails-i18n'
 gem 'devise-i18n'
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-i18n'
+gem 'cloudinary'
+gem 'figaro'
+gem 'carrierwave-video'
+gem 'dropzonejs-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

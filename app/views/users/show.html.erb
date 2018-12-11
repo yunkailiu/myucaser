@@ -6,7 +6,7 @@
     <div class="row">
       <% if @user.sex == "男" %>
         <%= image_tag 'man.png' , width: '30', height: '30' %>
-      <% else %>
+      <% elsif @user.sex == "女" %>
         <%= image_tag 'woman.png' , width: '30', height: '30' %>
       <% end %>
       <p class="username"><%= @user.name %></p>
