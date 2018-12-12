@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
 
   def index
-    @posts = Post.all.limit(10).includes(:photos, :user).order("created_at desc")
+    @posts = Post.paginate(:page => params[:page], :per_page => 5).includes(:photos, :user, :likes).order("created_at desc")
     @post = Post.new
   end
 
@@ -26,6 +26,10 @@ class PostsController < ApplicationController
 
   def show
     @posts = @post.photos
+    @likes = @post.likes.includes(:user)
+    @is_liked = @post.is_liked(current_user)
+    @is_bookmarked = @post.is_bookmarked(current_user)
+    set_meta_tags title: "Photo by "+@post.user.name
   end
   
   def destroy

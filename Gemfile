@@ -41,6 +41,8 @@ gem 'cloudinary'
 gem 'figaro'
 gem 'carrierwave-video'
 gem 'dropzonejs-rails'
+gem 'will_paginate-bootstrap4'
+gem 'meta-tags'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
