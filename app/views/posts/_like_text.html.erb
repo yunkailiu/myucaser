@@ -3,7 +3,7 @@
       <% if likes.size == 1 %>
           <%= like.user.name %> </strong> 赞了这条动态
       <% elsif like == likes.last %>
-          </strong>and<strong>
+          </strong>和<strong>
   <%= + like.user.name %></strong> 赞了这条动态
       <% elsif index > 1 %>
           </strong><%= "and " + (likes.size-index).to_s + " others " %> 赞了这条动态

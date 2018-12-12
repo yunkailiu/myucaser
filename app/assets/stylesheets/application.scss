@@ -228,7 +228,36 @@ footer .nav-item {
 .profile-wrapper {
   padding: 60px 0;
   border-bottom: 1px solid #efefef;
-
+  .btn-primary{
+      margin-top: 20px;
+  }
+  .btn-unfollow{
+    margin-top: 20px;
+  }
+  .stats {
+    overflow: auto;
+    margin-top: 0;
+    padding: 0;
+    margin-left: 68px;
+    margin-top: 10px;
+    a {
+      float: left;
+      padding: 0 10px;
+      border-left: 1px;
+      color: black;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    } &
+    :hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+    strong {
+      display: block;
+    }
+  }
   .username {
     font-size: 32px;
     line-height: 40px;
@@ -258,6 +287,18 @@ footer .nav-item {
   .sex {
     font-size: 16px;
     font-weight: bold;
+  }
+  .users {
+    list-style: none;
+    margin: 0;
+    li {
+        overflow: auto;
+        padding: 10px 0;
+        border-bottom: 1px;
+    }
+    h1{
+        text-align: center;
+    }
   }
 }
 
@@ -326,7 +367,7 @@ footer .nav-item {
       margin: 32px 0;
 
       .col-sm-9 {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 20px;
       }
