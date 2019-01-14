@@ -448,6 +448,10 @@ footer .nav-item {
 
   .card-body {
     padding: 5px 16px 5px;
+    .fa {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
   }
 
   .actions {
@@ -573,6 +577,17 @@ footer .nav-item {
 
   .image-preview {
     margin-bottom: 30px;
+  }
+  
+  /*关注和粉丝样式*/
+  .row-users {
+    margin-left: -50px;
+  }
+  .users-following {
+    a {
+      color: #007bff;
+    }
+    padding-left: 10px;
   }
 }
 
