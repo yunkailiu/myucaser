@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "toastr";
 @import "dropzone/dropzone";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 /*顶部导航栏*/
 body {
@@ -34,18 +35,17 @@ body {
   white-space: nowrap;
 }
 
-.explore-icon {
+.chat-icon {
   background-position: -50px -355px;
   height: 24px;
   width: 24px;
 }
 
-.notification-icon {
+.like-icon {
   background-position: -353px -298px;
   height: 24px;
   width: 24px;
 }
-
 .profile-icon {
   background-position: -308px -176px;
   height: 24px;
@@ -174,7 +174,7 @@ footer .nav-item {
 /* about页面 */
 .about {
   .form-about {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 40px;
     h1{
@@ -202,7 +202,7 @@ footer .nav-item {
 /* contact页面 */
 .contact {
   .form-contact{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 40px;
     p{
@@ -607,4 +607,40 @@ footer .nav-item {
 .popover-body {
   background: #fff;
   padding: 0;
+}
+
+//聊天界面
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.full-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
+input.form-control.sidebar-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.chat-box {
+  height: 94vh;
+  overflow: scroll;
+}
+
+.chat {
+  border-radius: 3px;
+  padding: 0rem 2rem 0 1rem;
+}
+
+.chat-username {
+  font-size: 0.7rem;
+}
+
+.chat-message {
+  font-size: 0.85rem;
 }

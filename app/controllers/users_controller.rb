@@ -12,6 +12,8 @@ class UsersController < ApplicationController
     @posts = @user.posts.includes(:photos, :likes, :comments)
     @saved = Post.joins(:bookmarks).where("bookmarks.user_id=?", current_user.id).
       includes(:photos, :likes, :comments) if @user == current_user
+    @liked = Post.joins(:likes).where("likes.user_id=?", current_user.id).
+      includes(:photos, :likes, :comments) if @user == current_user
   end
   
   #确保是正确的用户

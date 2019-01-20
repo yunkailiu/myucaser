@@ -16,27 +16,7 @@
       <p class="username"><%= @user.name %></p>
       <% if @user == current_user %>
         <%= link_to "完善资料", edit_user_registration_path, class: "btn btn-outline-dark common-btn edit-profile-btn" %>
-        <button type="button" class="core-sprite setting" data-toggle="modal" data-target="#exampleModal"></button>
       <% end %>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">设置</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="list-group text-center">
-              <%= link_to "修改密码", edit_user_registration_path, class: "list-group-item list-group-item-action" %>
-              <%= link_to "退出", destroy_user_session_path, method: :delete,
-                class: "list-group-item list-group-item-action" %>
-              <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">取消</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="row-email">
       <p class="email"><%= image_tag 'email.png' , width: '30', height: '30' %>：<%= @user.email %></p>
@@ -58,6 +38,7 @@
       <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-posts-tab" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-posts" aria-selected="true">已发布</a>
         <a class="nav-item nav-link" id="nav-saved-tab" data-toggle="tab" href="#nav-saved" role="tab" aria-controls="nav-saved" aria-selected="false">已收藏</a>
+        <a class="nav-item nav-link" id="nav-likes-tab" data-toggle="tab" href="#nav-likes" role="tab" aria-controls="nav-likes" aria-selected="false">已点赞</a>
       </div>
     </nav>
     <% end %>
@@ -70,6 +51,11 @@
       <div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab">
         <div class="row">
           <%= render "post", {posts: @saved} if @user == current_user %>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-likes" role="tabpanel" aria-labelledby="nav-likes-tab">
+        <div class="row">
+          <%= render "post", {posts: @liked} if @user == current_user %>
         </div>
       </div>
     </div>

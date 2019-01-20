@@ -17,15 +17,34 @@
       <% end %>
       <ul class="navbar-nav ml-md-auto">
         <li class="nav-item">
-          <a class="nav-link core-sprite explore-icon hide-text" href="#">Explore</a>
+          <%= link_to " Chat", chats_path(current_user), class: "nav-link core-sprite chat-icon hide-text" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link core-sprite notification-icon hide-text" href="#">Notification</a>
+          <%= link_to "Like", user_path(current_user), class: "nav-link core-sprite like-icon hide-text" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Profile", user_path(current_user), class: "nav-link core-sprite profile-icon hide-text" %>
+          <a href="Post" class="nav-link core-sprite profile-icon hide-text" data-toggle="modal" data-target="#exampleModal"></a>
         </li>
       </ul>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">设置</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="list-group text-center">
+              <%= link_to "修改密码", edit_user_registration_path, class: "list-group-item list-group-item-action" %>
+              <%= link_to "退出", destroy_user_session_path, method: :delete,
+                class: "list-group-item list-group-item-action" %>
+              <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">取消</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

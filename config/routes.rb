@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-
   root 'posts#index'
+  
+  get 'chats/create'
+  get 'chats/new'
+  get 'chats/show'
+  get 'chats/index'
+
   
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
@@ -12,6 +17,7 @@ Rails.application.routes.draw do
   controllers: {registrations: 'registrations'}
   
   resources :users, only: [:index, :show]
+  resources :chats
   
   resources :users do
     member do

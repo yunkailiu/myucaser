@@ -44,6 +44,8 @@ gem 'dropzonejs-rails'
 gem 'will_paginate-bootstrap4'
 gem 'meta-tags'
 gem 'faker',  '1.7.3'
+gem 'pusher'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
