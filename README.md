@@ -1,24 +1,27 @@
-# README
+# 国科大论坛——ucaser
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+该项目为高级软件工程的期末大作业，根据udemy的网课学习完成的ruby on rails系统
 
-Things you may want to cover:
+* [udemy课程链接](https://www.udemy.com/how-to-build-instagram-using-ruby-on-rails/)
 
-* Ruby version
+* 部署：[这里](https://serene-waters-82046.herokuapp.com/)
 
-* System dependencies
+* ruby版本：2.4.0 
 
-* Configuration
+* rails版本：5.1.6.1
 
-* Database creation
+* 开发环境：[Cloud9](https://c9.io) 
 
-* Database initialization
+* 数据库：开发环境为sqlite，部署环境为postgresql
 
-* How to run the test suite
+* 部署环境：heroku
 
-* Services (job queues, cache servers, search engines, etc.)
+* 克隆到本地：`git clone`
 
-* Deployment instructions
+* 进入文件夹：`cd ucaser`
 
-* ...
+* 安装依赖库：`bundle install`
+
+* 迁移数据库：`rails db:migrate` 
+
+* 运行：`rails server -p $PORT -b $IP`
