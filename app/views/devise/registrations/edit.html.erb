@@ -71,7 +71,7 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
-
+      
       <div class="form-group row">
         <%= f.label :password, class: "col-sm-3 col-form-label text-right font-weight-bold" %>
         <div class="col-sm-9">
