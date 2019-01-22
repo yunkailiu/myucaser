@@ -4,7 +4,7 @@
 
 * [udemy课程链接](https://www.udemy.com/how-to-build-instagram-using-ruby-on-rails/)
 
-* 部署：[这里](https://serene-waters-82046.herokuapp.com/)
+* 部署：[这里](https://dry-plateau-88632.herokuapp.com/)
 
 * ruby版本：2.4.0 
 
