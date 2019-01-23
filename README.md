@@ -1,10 +1,10 @@
 # 国科大论坛——ucaser
 
-该项目为高级软件工程的期末大作业，根据udemy的网课学习完成的ruby on rails系统
-
-* [udemy课程链接](https://www.udemy.com/how-to-build-instagram-using-ruby-on-rails/)
+该项目为高级软件工程的期末大作业
 
 * 部署：[这里](https://dry-plateau-88632.herokuapp.com/)
+
+* 测试用例登录：用户名liuyunkai18@mails.ucas.ac.cn   密码123456
 
 * ruby版本：2.4.0 
 
